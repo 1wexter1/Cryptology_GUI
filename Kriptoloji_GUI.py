@@ -23,7 +23,7 @@ def clear_all_widgets():
 
 
 def main_buttons():
-    clear_all_widgets()  # tüm bileşenleri temizler
+    clear_all_widgets()  #tüm bileşenleri temizleme işlemi
 
     imza = tk.Label(root, text=" By Wexter ",font=("Arial", 18, "bold"), fg="red", bg=BG_COLOR)
     imza.pack(side="bottom")
