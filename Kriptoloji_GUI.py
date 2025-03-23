@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-import pyperclip  # Kopyalama işlemi için
+import pyperclip  
 import base64
 
 # Ana pencere
@@ -24,7 +24,10 @@ def clear_all_widgets():
 
 def main_buttons():
     """Ana menü butonlarını oluşturur."""
-    clear_all_widgets()  # Önce tüm bileşenleri temizle
+    clear_all_widgets()  # tüm bileşenleri temizler
+
+    imza = tk.Label(root, text=" By Wexter ",font=("Arial", 18, "bold"), fg="red", bg=BG_COLOR)
+    imza.pack(side="bottom")
     
     main_label = tk.Label(root, text="(:<  KULLANACAĞINIZ İŞLEMİ SEÇİN  >:)", font=("Arial", 12, "bold"), fg="white", bg=BG_COLOR)
     main_label.pack(pady=25)
