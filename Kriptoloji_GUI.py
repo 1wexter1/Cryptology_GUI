@@ -16,14 +16,13 @@ BUTTON_COLOR_4 = "#FAA61A"
 root.configure(bg=BG_COLOR)
 
 def clear_all_widgets():
-    """Ekrandaki tüm bileşenleri temizler."""
+
     for widget in root.winfo_children():
         widget.destroy()
 
 
 
 def main_buttons():
-    """Ana menü butonlarını oluşturur."""
     clear_all_widgets()  # tüm bileşenleri temizler
 
     imza = tk.Label(root, text=" By Wexter ",font=("Arial", 18, "bold"), fg="red", bg=BG_COLOR)
@@ -100,7 +99,6 @@ def main_buttons():
     
 
 def binary_main_button():
-    """Binary işlemleri ekranını açar."""
     clear_all_widgets()
     
     label_bin = tk.Label(root, text="Binary İşlemleri:", font=("Arial", 12, "bold"), fg="white", bg=BG_COLOR)
@@ -119,7 +117,6 @@ def binary_main_button():
     back_button.pack(pady=5)
 
 def hexadecimal_main_buttons():
-    """Hexadecimal işlemleri ekranını açar."""
     clear_all_widgets()
 
     label_hex = tk.Label(root, text="Hexadecimal İşlemleri:", font=("Arial", 12, "bold"), fg="white", bg=BG_COLOR)
@@ -138,7 +135,6 @@ def hexadecimal_main_buttons():
     back_button.pack(pady=5)
 
 def show_result(result_text):
-    """Sonucu ekrana yazdır ve kopyalama butonu ekle."""
     clear_all_widgets()
 
     label = tk.Label(root, text="Sonuç:", font=("Arial", 12, "bold"), fg="white", bg=BG_COLOR)
@@ -160,7 +156,6 @@ def show_result(result_text):
     back_button.pack(pady=5)
 
 def hex_encode():
-    """Hexadecimal encode işlemi."""
     clear_all_widgets()
     
     label = tk.Label(root, text="Metni girin:", font=("Arial", 12, "bold"), fg="white", bg=BG_COLOR)
@@ -180,7 +175,6 @@ def hex_encode():
     convert_button.pack(pady=5)
 
 def hex_decode():
-    """Hexadecimal decode işlemi."""
     clear_all_widgets()
 
     label = tk.Label(root, text="Hexadecimal kodunu girin:", font=("Arial", 12, "bold"), fg="white", bg=BG_COLOR)
@@ -199,7 +193,6 @@ def hex_decode():
     convert_button.pack(pady=5)
 
 def encode(): #sadece binary için 
-    """Binary encode işlemi."""
     clear_all_widgets()
 
     label = tk.Label(root, text="Metin girin:", font=("Arial", 12, "bold"), fg="white", bg=BG_COLOR)
@@ -219,7 +212,6 @@ def encode(): #sadece binary için
     convert_button.pack(pady=5)
 
 def decode():
-    """Binary decode işlemi."""
     clear_all_widgets()
 
     label = tk.Label(root, text="Binary kodunu girin:", font=("Arial", 12, "bold"), fg="white", bg=BG_COLOR)
@@ -476,7 +468,6 @@ def base64_encode():
 
     
 def base64_decode():
-    """Hexadecimal decode işlemi."""
     clear_all_widgets()
 
     label = tk.Label(root, text="Base64 kodunu girin:", font=("Arial", 12, "bold"), fg="white", bg=BG_COLOR)
@@ -549,7 +540,6 @@ def xor_encode():
         for i in range(len(sifrelenecek_metin)):
             encrypted_message += chr(ord(sifrelenecek_metin[i]) ^ ord(key[i % len(key)]))
 
-        # Şifrelenmiş metni göster
         show_result(encrypted_message)
         
     convert_button = tk.Button(root, text="Dönüştür", command=convert, bg=BUTTON_COLOR_2, fg="white", font=("Arial", 10, "bold"))
